@@ -6,17 +6,17 @@ Created on Thu Mar 13 13:57:25 2014
 """
 
 import SimpleCV as scv
-import time
-import os, sys
+import os
 
 ############################################################################
 # Global Variables
 ############################################################################
 
+# For input 1
+g_file_path_1 = "./1_parkinglot_full.png"
+g_file_path_2 = "./1_parkinglot_empty_2.png"
 g_parking_area_num = 6
-
-# pair of x and y
-g_parking_area_pos = [
+g_parking_area_pos = [  # pair of x and y
     [30, 150],
     [200, 140],
     [350, 135],
@@ -24,9 +24,7 @@ g_parking_area_pos = [
     [640, 135],
     [780, 127],
 ]
-
-# pair of width and height
-g_parking_area_size = [
+g_parking_area_size = [ # pair of width and height
     [145, 60],
     [140, 55],
     [135, 60],
@@ -34,6 +32,29 @@ g_parking_area_size = [
     [115, 90],
     [140, 60],
 ]
+
+# For input 2
+"""
+g_file_path_1 = "./1_parkinglot_full.png"
+g_file_path_2 = "./1_parkinglot_empty_2.png"
+g_parking_area_num = 6
+g_parking_area_pos = [  # pair of x and y
+    [30, 150],
+    [200, 140],
+    [350, 135],
+    [500, 135],
+    [640, 135],
+    [780, 127],
+]
+g_parking_area_size = [ # pair of width and height
+    [145, 60],
+    [140, 55],
+    [135, 60],
+    [125, 75],
+    [115, 90],
+    [140, 60],
+]
+"""
 
 #g_approach_num = 'A_1'
 g_approach_num = 'B_1'
@@ -169,8 +190,8 @@ if __name__ == "__main__":
             inp = raw_input("Input any (exit: x): ")
             if inp == "x":
                 break
-            file_path_1 = "./parkinglot_full.png"
-            file_path_2 = "./parkinglot_empty_2.png"
+            file_path_1 = g_file_path_1
+            file_path_2 = g_file_path_2
         n = None
     ## for testing
 #        n = int(raw_input("# ROI Num: "))
